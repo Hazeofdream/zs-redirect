@@ -1,9 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=steam://connect/193.243.190.32:27015">
-  </head>
-  <body>
-    <p>If you are not redirected automatically, <a href="steam://connect/193.243.190.32:27015">click here to join the server</a>.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connecting to Server...</title>
+  <script>
+    window.onload = function() {
+      // Attempt to open the Steam connect URL
+      const steamUrl = "steam://connect/193.243.190.32:27015";
+      window.location.href = steamUrl;
+
+      // Give the browser a moment to trigger the protocol handler, then close
+      setTimeout(() => {
+        // Works only if the page was opened as a tab by user interaction
+        window.open('', '_self');
+        window.close();
+      }, 1500);
+    };
+  </script>
+</head>
+<body style="background-color: #0e0e0e; color: white; text-align: center; font-family: sans-serif; margin-top: 40vh;">
+  <h2>Launching Zombie Survival Server...</h2>
+  <p>If Steam doesn’t open automatically, <a href="steam://connect/193.243.190.32:27015" style="color:#00afff;">click here</a>.</p>
+</body>
 </html>
